@@ -2,20 +2,17 @@
 
 > A Vue.js project
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+## 引入element-ui
+1. 在@/build/webpack.base.conf.js 下添加
 ```
+{
+  test: /\\\\\\\\.css$/,
+  loader: "style!css"
+},
+{
+  test: /\\\\\\\\.(eot|woff|woff2|ttf)([\\\\\\\\?]?.*)$/,
+  loader: "file"
+}
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```
+2. 在App.vue 的js文件中引入 ElementUI 与 index.css文件
