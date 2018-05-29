@@ -16,3 +16,7 @@
 
 ```
 2. 在App.vue 的js文件中引入 ElementUI 与 index.css文件
+```
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+```
