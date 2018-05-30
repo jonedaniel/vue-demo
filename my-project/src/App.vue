@@ -1,9 +1,27 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="item in links"><a @click="$goRoute(item.route)">{{item.text}}</a></li>
-    </ul>
-    <router-view></router-view>
+  <div class="outer-body">
+    <el-container>
+      <el-header>
+        <div>
+          <div style="display: inline-block;position: relative;left: 20%;right: 50%;width: 150px;">
+            <h1 style="margin-top: 0px;">zmh的主页</h1>
+          </div>
+          <div v-for="item in links" style="display: inline-block;float: right;z-index: 2147483647">
+            <el-button type="primary" plain><a @click="$goRoute(item.route)">{{item.text}}</a></el-button>
+          </div>
+        </div>
+      </el-header>
+      <el-main class="main-body">
+        <router-view></router-view>
+      </el-main>
+      <el-footer>
+        <div align="center">
+          <a href="https://github.com/jonedaniel/precloud">我的github</a><br>
+          email:623299342@qq.com
+        </div>
+      </el-footer>
+    </el-container>
+
   </div>
 </template>
 
@@ -14,16 +32,20 @@
       return {
         links: [
           {
-            text: '胡萝卜',
-            route: '/home'
-          },
-          {
-            text: '大白菜',
-            route: '/page01'
+            text: '打分',
+            route: '/score'
           },
           {
             text: '水蜜桃',
             route: '/page02'
+          },
+          {
+            text: '页面1',
+            route: '/page01'
+          },
+          {
+            text: '主页',
+              route: '/home'
           }
         ]
       }
@@ -32,33 +54,17 @@
 </script>
 
 <style>
-  .text-center {
-    text-align: center;
+  .outer-body{
+    width: 1000px;
+    height: 600px;
+    background-image: url("assets/image/1.jpg");
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
+    left: 15%;
   }
-
-  .spacing {
-    margin-top: 30px;
-  }
-
-  .red {
-    color: darkred;
-  }
-
-  ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  ul li a {
-    display: inherit;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-  }
-
-  ul li a:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #138bec;
-    border: 1px solid #138bec;
+  .main-body{
+    width:1000px;
+    height: 500px;
   }
 </style>

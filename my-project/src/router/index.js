@@ -6,8 +6,9 @@ import page02 from '@/components/page02'
 import page01A from '@/components/page01/page01-A'
 import page01B from '@/components/page01/page01-b'
 import pageEnd from '@/components/page01/B/end'
+import score from '@/components/score'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -20,6 +21,11 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: home
+    },
+    {
+      path: '/score',
+      name: 'score',
+      component: score
     },
     {
       path: '/page01',
