@@ -20,3 +20,5 @@
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 ```
+
+3. 通过二级路由使Home.vue成为父组件
