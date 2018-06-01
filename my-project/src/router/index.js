@@ -4,7 +4,7 @@ import home from '@/components/home'
 import page01 from '@/components/page01'
 import page02 from '@/components/page02'
 import page01A from '@/components/page01/page01-A'
-import page01B from '@/components/page01/page01-b'
+import page01B from '@/components/page01/page01-B'
 import pageEnd from '@/components/page01/B/end'
 import score from '@/components/score'
 
